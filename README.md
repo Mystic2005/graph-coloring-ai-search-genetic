@@ -6,7 +6,8 @@ Author: Bostangiu Luca-Nicolae
 I implemented A* algorithm using the state representation, expansion, cost and heuristic functions. I ran three heuristic variants, represented below. For each heuristic I ran A* on all problems:
 ### 1. h = 0
 - Admissible trivial heuristic, but uninformed, so it is really slow but it returns the most optimal cost.
-  | Problem | Algorithm | Time | Benefit |
+
+| Problem | Algorithm | Time | Benefit |
 |----------|-----------|--------|-----------|
 | P0       |  A*       | 0.000041s     | 5         |
 | P1       |  A*      | 0.000087s     | 5         |
@@ -15,7 +16,8 @@ I implemented A* algorithm using the state representation, expansion, cost and h
 | P4       |  A*      | 208.60s     | 5         |
 ### 2. h = len(state["colors"]) - state["nextnode"]) (estimates the number of remaining nodes)
 - Very fast and cheap heuristic ( O(1) ), the fastest out of these 3, but unadmissible and not so well informed, getting bad quality results in the more complicated datasets.
-  | Problem | Algorithm | Time | Benefit |
+
+| Problem | Algorithm | Time | Benefit |
 |----------|-----------|--------|-----------|
 | P0       |  A*       | 0.000024s     | 5         |
 | P1       |  A*      | 0.0023s     | 5         |
@@ -24,7 +26,8 @@ I implemented A* algorithm using the state representation, expansion, cost and h
 | P4       |  A*      | 0.0010s     | 7         |
 ### 3. h = active heuristic which verifies for each remaining uncolored node if it s necessary a new color (u can see the code in the heuristic function above)
 - More costy, but really well informed, I found this unadmissible heuristic the best as it keeps a balance between speed and the quality of the solution, getting the same results as the admissible one but much much faster. (I explained about admissibility in the active function if u scroll up again)
-  | Problem | Algorithm | Time | Benefit |
+
+| Problem | Algorithm | Time | Benefit |
 |----------|-----------|--------|-----------|
 | P0       |  A*       | 0.000048s     | 5         |
 | P1       |  A*      | 0.00044s     | 5         |
